@@ -6,7 +6,6 @@ import i18n from '../i18n/i18n';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
 export const Navar = () => {
   const { t } = useTranslation();
   const [darkMode, setDarkMode] = useState(true);
