@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import ListGroup from 'react-bootstrap/ListGroup';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Image from 'next/image';
 
 
 
@@ -29,12 +30,16 @@ const Home: React.FC = () => {
       <div id="developer" className="container-fluid d-flex justify-content-center align-items-start py-5">
         <div className="row flex-wrap p-4 rounded " style={{ maxWidth: "1300px", width: "100%" }}>
           <div className="col-md-4 img-container text-center mb-3 mb-md-0 ">
-            <img
-              alt="Bootstrap Image Preview"
-              src="https://raw.githubusercontent.com/JorgeIvan172/Imagenes/refs/heads/master/IvanH.jpg"
-              className="rounded-circle img-fluid"
-              style={{ maxWidth: "350px", height: "auto" }}
-            />
+            <Image
+                alt="Bootstrap Image Preview"
+                src="https://raw.githubusercontent.com/JorgeIvan172/Imagenes/refs/heads/master/IvanH.jpg"
+                className="rounded-circle img-fluid"
+                width={350}
+                height={350}
+                style={{ height: 'auto' }}
+                unoptimized // Esto es necesario para imágenes externas como GitHub
+                />
+
           </div>
           <div className="col-md-8 text-container">
             <h1 style={{ fontSize: '4rem' }}>Iván Herrera</h1>
