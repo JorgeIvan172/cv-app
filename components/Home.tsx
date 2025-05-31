@@ -48,11 +48,11 @@ const Home: React.FC = () => {
             <p>
               {t('descr')} 
             </p>
-            <p>
-              <a className="btn btn-dark" href="#">
-                Contacto
-              </a>
-            </p>
+
+            <button className="button-home" onClick={() => window.location.href = "#contact"}>
+              {t('contact')}
+            </button>
+
           </div>
         </div>
       </div>

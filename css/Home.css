@@ -184,10 +184,29 @@ body {
 }
 
 
+/* Estilo base del botón personalizado */
+.button-home {
+  margin-top: 10px;
+  background-color: #000000; /* Fondo negro */
+  color: rgb(255, 255, 255); /* Texto blanco */
+  padding: 0.75rem 1.5rem; /* Espaciado interno (vertical, horizontal) */
+  font-size: 1.1rem; /* Tamaño de fuente ligeramente más grande */
+  border-radius: 10px; /* Bordes redondeados */
+  border: none; /* Sin borde */
+  font-weight: 380; /*texto de negritas */
+  text-decoration: none; /* Sin subrayado */
+  cursor: pointer; /* Cambia el cursor a pointer al pasar por encima */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  transition: all 0.3s ease; /* Suaviza la transición en hover */
+}
 
-
-
-
-
-
+/* Estilo cuando el cursor pasa sobre el botón */
+.button-home:hover {
+  background-color: #2e86c1; /* Cambia el fondo a azul */
+  color: black; /* Cambia el color del texto a rojo */
+  font-weight: 380; /*texto de negritas */
+  transform: translateY(-4px) scale(1.05); /* Eleva y agranda ligeramente el botón */
+  text-decoration: none; /* Sigue sin subrayado */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25); /* Aumenta la sombra al hacer hover */
+}
 

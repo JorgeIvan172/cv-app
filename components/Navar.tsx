@@ -43,6 +43,7 @@ export const Navar = () => {
                 {t('english')}
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="/proyects">{t('projects')}</Nav.Link>
 
             <Form.Check
               type="switch"
@@ -61,4 +62,3 @@ export const Navar = () => {
     </Navbar>
   );
 };
-//<Nav.Link href="/proyects">{t('projects')}</Nav.Link>
