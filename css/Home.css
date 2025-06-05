@@ -30,6 +30,19 @@
 .experien {
   min-height: 20px;
   padding: 20px 30px;/* 20px arriba y abajo, 0 a los lados */
+  transition: all 0.3s ease-in-out; /* Transición suave al aplicar hover */
+  border: 2px solid transparent; /* Borde transparente por defecto */
+  padding: 1.5rem; /* Espaciado interno */
+  background-color: #f8f9fa; /* Color de fondo claro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.experien:hover {
+  transform: scale(1.07); /* Aumenta ligeramente el tamaño */
+  border-color: #ffc107; /* Cambia el borde a amarillo (Bootstrap warning color) */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  background-color: #fffbea; /* Color de fondo más cálido */
 }
 
 .fondo{
