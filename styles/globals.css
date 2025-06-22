@@ -1,42 +1,210 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* GLOBAL.CSS */
+
+/* Modo oscuro y claro */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+
+/* FORMULARIOS */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #333;
+}
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode select {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* HOME SECTION STYLES */
+
+/* Fondo general de la página */
+body.light-mode .fondo {
+  background-color: rgb(232, 232, 232);
+}
+body.dark-mode .fondo {
+  background-color: #121212;
 }
 
-* {
-  box-sizing: border-box;
+/* Experien Card */
+.experien {
+  min-height: 20px;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+body.light-mode .experien {
+  background-color: #f8f9fa;
+}
+body.dark-mode .experien {
+  background-color: #1f1f1f;
+}
+
+.experien:hover {
+  transform: scale(1.07);
+  border-color: #ffc107;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+body.light-mode .experien:hover {
+  background-color: #27ae60;
+}
+body.dark-mode .experien:hover {
+  background-color: #292929;
+}
+
+body.dark-mode .text-muted {
+  color: #bbbbbb !important;
+}
+
+
+/* Skills chips */
+.home-skills ul {
+  list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.home-skills li {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  display: inline-block;
   margin: 0;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+body.light-mode .home-skills li {
+  background-color: #aed6f1;
+  color: #2e86c1;
+}
+body.dark-mode .home-skills li {
+  background-color: #444;
+  color: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Imagen y texto responsive */
+@media (max-width: 510px) {
+  .img-container img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+  }
+
+  .img-container {
+    min-width: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .text-container {
+    flex: 1;
+    min-width: 200px;
+    text-align: justify;
   }
 }
+
+@media (max-width: 1180px) {
+  .text-container {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column !important;
+  }
+
+  .img-container {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Ajuste de espacio por Navbar */
+body {
+  padding-top: 70px;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 5rem 1rem 2rem;
+}
+
+/* Hover de tarjetas */
+.custom-item {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+.custom-item:hover {
+  transform: scale(1.05);
+  border-color: black;
+  background-color: #aed6f1;
+  cursor: pointer;
+}
+body.dark-mode .custom-item:hover {
+  background-color: #333;
+  border-color: #aaa;
+}
+
+/* Email copy */
+.email-copy {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #2e86c1;
+}
+.email-copy:hover {
+  font-weight: bold;
+}
+
+/* Botón personalizado */
+.button-home {
+  margin-top: 10px;
+  background-color: #000000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 380;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.button-home:hover {
+  background-color: #2e86c1;
+  color: black;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Estilo tipo chip para BETA en el navbar */
+.navbar .nav-link.beta-label {
+  pointer-events: none; /* Bloquea clics */
+  opacity: 0.85;
+  cursor: default;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+  background-color: #c0392b  !important;
+  color: #ffffff!important;
+  border: 1px solid #c0392b  ;
+}
+
+.navbar .nav-link.beta-label:hover {
+  background-color: #f5b7b1 !important;
+  color: #922b21 !important;
+}
+

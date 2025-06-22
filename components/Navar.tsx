@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const Navar = () => {
   const { t } = useTranslation();
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     if (darkMode) {
@@ -31,6 +31,7 @@ export const Navar = () => {
             <Nav.Link href="/#skills">{t('skills')}</Nav.Link>
             <Nav.Link href="/#contact">{t('contact')}</Nav.Link>
             
+          <Nav.Link as="span" className="beta-label">BETA</Nav.Link>
 
           </Nav>
           <Nav>

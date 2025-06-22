@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 
 
+
 // Tipado para las habilidades
 interface SkillCategory {
   name: string;
@@ -46,7 +47,7 @@ const Home: React.FC = () => {
 
             <h4>{t('fullstack')}</h4>
             <p>
-              {t('descr')} 
+              {t('texto2')} 
             </p>
 
             <button className="button-home" onClick={() => window.location.href = "#contact"}>
@@ -62,7 +63,7 @@ const Home: React.FC = () => {
         <div className="row p-4 align-items-center" style={{ maxWidth: "1300px", width: "100%" }}>
           <h3 style={{ marginBottom: "25px" }}><i className="fas fa-briefcase me-2"></i> {t('experience')} </h3>
 
-          <div className="col-md-12  experien border rounded shadow-sm bg-light h-100" style={{ marginTop: "20px" }}>
+          <div className="col-md-12  experien border rounded shadow-sm  h-100" style={{ marginTop: "20px" }}>
               <div className="row align-items-center">
                 <div className="col-md-4 mb-3 mb-md-0  text-center" >
                   <h3 className="mb-1">Freelancer</h3>
@@ -77,7 +78,7 @@ const Home: React.FC = () => {
               </div>
             </div>
 
-          <div className="col-md-12  experien border rounded shadow-sm bg-light h-100" style={{ marginTop: "20px" }}>
+          <div className="col-md-12  experien border rounded shadow-sm  h-100" style={{ marginTop: "20px" }}>
               <div className="row align-items-center">
                 <div className="col-md-4 mb-3 mb-md-0  text-center" >
                   <h3 className="mb-1">Sensata Technologies</h3>
@@ -92,7 +93,7 @@ const Home: React.FC = () => {
               </div>
             </div>
           
-            <div className="col-md-12  experien border rounded shadow-sm bg-light h-100" style={{ marginTop: "20px" }}>
+            <div className="col-md-12  experien border rounded shadow-sm  h-100" style={{ marginTop: "20px" }}>
               <div className="row align-items-center">
                 <div className="col-md-4 mb-3 mb-md-0  text-center" >
                   <h3 className="mb-1">Jatco México</h3>
@@ -113,14 +114,14 @@ const Home: React.FC = () => {
 
       {/* Habilidades */}
       <div id="skills" className="container-fluid d-flex justify-content-center align-items-start py-4 home-skills">
-        <div className="row bg-white p-4" style={{ maxWidth: "1300px", width: "100%" }}>
+        <div className="row p-4" style={{ maxWidth: "1300px", width: "100%" }}>
           <div className="col">
             <h3 style={{ marginBottom: "25px" }}><i className="fa-solid fa-code"></i>  {t('skills')}</h3>
 
             <div className="row">
               {skills.map((category, index) => (
                 <div key={index} className="col-md-6 col-lg-3 mb-4">
-                  <div className="p-3 border rounded shadow-sm bg-light h-100">
+                  <div className="p-3 border rounded shadow-sm h-100">
                     <h5 className="mb-3">{category.name}</h5>
                     <ul>
                       {category.items.map((item, i) => (
@@ -141,7 +142,7 @@ const Home: React.FC = () => {
      <div id="schooling" className="container-fluid d-flex justify-content-center align-items-center py-4 fondo" style={{paddingBottom:"15px"}}>
         <div className="row p-4 align-items-center" style={{ maxWidth: "1300px", width: "100%",  }}>
             <h3 style={{ marginBottom: "25px" }}><i className="fa-solid fa-graduation-cap"></i>  {t('schooling')}</h3>
-            <div  className="col-md-12  experien border rounded shadow-sm bg-light h-100">
+            <div  className="col-md-12  experien border rounded shadow-sm h-100">
               <div className="row align-items-center ">
                 <div className="col-md-4 mb-3 mb-md-0 text-center " >
                   <h3 className="mb-1"><i ></i> {t('school')}</h3>
